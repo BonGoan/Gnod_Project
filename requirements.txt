@@ -146,7 +146,6 @@ keyring
 kiwisolver 
 lazy-object-proxy 
 lazy_loader 
-lckr_jupyterlab_variableinspector 1
 libarchive-c 
 libmambapy 
 linkify-it-py 
