@@ -19,11 +19,11 @@ def load_models():
         df_playlist_new = load_data()
 
         # Load KMeans model
-        with open('kmeans.pkl', 'rb') as file:
+        with open('04_streamlit/kmeans.pkl', 'rb') as file:
             kmeans_model = pkl.load(file)
 
         # Load Scaler model
-        with open("scaler.pkl", 'rb') as file:
+        with open("04_streamlit/scaler.pkl", 'rb') as file:
             scaler_model = pkl.load(file)
 
     except EOFError as e:
