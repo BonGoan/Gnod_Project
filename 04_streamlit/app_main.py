@@ -1,16 +1,12 @@
 import streamlit as st
-import pandas as pd
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
-import pickle as pkl
 import os
 from functions import bring_song, classify_song, song_recommender, load_data, load_models
 from IPython.core.display import display, HTML
-import config
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id= config.client_id,
-                                                           client_secret= config.client_secret))
 
-
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id= st.secrets.client_id,
+                                                           client_secret= st.secrets.client_secret))
 
 load_data ()
 load_models ()

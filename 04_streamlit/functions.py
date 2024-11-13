@@ -1,6 +1,5 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
-import config
 import pandas as pd
 import spotipy
 import streamlit as st
@@ -8,8 +7,8 @@ import pickle as pkl
 import os
 from IPython.core.display import display, HTML
 
-sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id= config.client_id,
-                                                           client_secret= config.client_secret))
+sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id= st.secrets.client_id,
+                                                           client_secret= st.secrets.client_secret))
 
 
 def load_models():
